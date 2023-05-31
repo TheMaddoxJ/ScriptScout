@@ -30,6 +30,14 @@ Post.init(
                 key: 'id'
                 },
             },
+        location: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        salary: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
         },
         {
         sequelize,
