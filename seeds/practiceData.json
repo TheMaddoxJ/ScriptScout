@@ -1,0 +1,18 @@
+
+[
+  {
+    "title": "Software Engineer Practice",
+    "content": "Practice your Software Engineer Skills",
+    "user_id": 1
+  },
+  {
+    "title": "Software Developer Practice",
+    "content": "Practice your Software Developer Skills!",
+    "user_id": 2
+  },
+  {
+    "title": "SR Software Developer Practice",
+    "content": "Practice your Advance Software Engineer Skills!",
+    "user_id": 3
+  }
+]
