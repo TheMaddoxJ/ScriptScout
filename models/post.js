@@ -12,11 +12,11 @@ Post.init(
         },
         title: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
             },
         content: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
         date_created: {
             type: DataTypes.DATE,
@@ -32,11 +32,11 @@ Post.init(
             },
         location: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         salary: {
             type: DataTypes.INTEGER,
-            allowNull: false,
+            allowNull: true,
         },
         },
         {

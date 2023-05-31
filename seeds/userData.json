@@ -1,26 +1,26 @@
 [
   {
-    "username": "Maddox",
+    "name": "Maddox",
     "email": "Maddox@gmail.com",
     "password": "password12345"
   },
   {
-    "username": "Fernando",
+    "name": "Fernando",
     "email": "fern@gmail.com",
     "password": "password12345"
   },
   {
-    "username": "Joshua",
+    "name": "Joshua",
     "email": "Joshua@gmail.com",
     "password": "password12345"
   },
   {
-    "username": "Khusil",
+    "name": "Khusil",
     "email": "Khusil@gmail.com",
     "password": "password12345"
   },
   {
-    "username": "JK",
+    "name": "JK",
     "email": "JK@gmail.com",
     "password": "GiveusanA+!"
   }

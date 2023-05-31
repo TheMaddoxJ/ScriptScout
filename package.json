@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "seed": "node seeds/seed.js"
   },
   "repository": {
     "type": "git",
