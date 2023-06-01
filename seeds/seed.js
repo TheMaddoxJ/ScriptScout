@@ -15,17 +15,16 @@ const seedDatabase = async () => {
 
   for (const post of jobData) {
     await Post.create({
-      ...post,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
+      ...post
     });
   }
 
-  for (const post of practiceData) {
-    await Post.create({
-        ...post,
-        user_id: users[Math.floor(Math.random() * users.length)].id,
-        });
-    }
+  // for (const post of practiceData) {
+  //   await Post.create({
+  //       ...post,
+  //       user_id: users[Math.floor(Math.random() * users.length)].id,
+  //       });
+  //   }
 
   process.exit(0);
 };
