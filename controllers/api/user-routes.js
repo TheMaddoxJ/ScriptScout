@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // CREATE new user
 router.post('/', async (req, res) => {
@@ -53,6 +54,7 @@ router.post('/login', async (req, res) => {
       res
         .status(200)
         .json({ user: dbUserData, message: 'You are now logged in!' });
+        console.log('You are now logged in!');
     });
   } catch (err) {
     console.log(err);
@@ -60,14 +62,18 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// Logout
-router.post('/logout', (req, res) => {
-  if (req.session.loggedIn) {
-    req.session.destroy(() => {
-      res.status(204).end();
-    });
-  } else {
-    res.status(404).end();
+// logout user ('/api/users/logout')
+router.post('/logout', withAuth, async (req, res) => {
+  try {
+      if (req.session.loggedIn) {
+          const dbUserData = await req.session.destroy(() => {
+              res.status(204).end();
+          });
+      } else {
+          res.status(404).end();
+      }
+  } catch {
+      res.status(400).end();
   }
 });
 

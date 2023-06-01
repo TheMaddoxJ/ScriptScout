@@ -1,10 +1,23 @@
-
 [
   {
     "title": "Software Engineer",
     "content": "Looking for a Software Engineer",
-    "salary:": 10000,
-    "user_id": 1,
-    "location": "Florida"
+    "location": "Florida",
+    "salary": 10000,
+    "user_id": 1
+  },
+  {
+    "title": "Software Engineer",
+    "content": "Looking for a Software Engineer",
+    "location": "California",
+    "salary": 20000,
+    "user_id": 2
+  },
+  {
+    "title": "Software Engineer",
+    "content": "Looking for a Software Engineer",
+    "location": "NY",
+    "salary": 15000,
+    "user_id": 3
   }
 ]
