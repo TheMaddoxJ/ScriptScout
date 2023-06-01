@@ -5,33 +5,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Script Scout</title>
+  <!--Bootstrap CDN -->
+  <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" 
+        crossorigin="anonymous"/>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body>
-  <div>
-    <header>
-      <h1>
-        <a href="/">Script Scout</a>
-      </h1>
-      <nav>
 
-          <input type="text" placeholder="Search.."><button class="search" id="search">Search</button>
+
+<body>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Script Scout</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        {{!-- <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/">Profile</a>
+        </li> --}}
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <div class="navbar mx-2">
+        {{#if loggedIn}}
+             <a class="nav-link" aria-current="page" href="/">Home</a>
+            <!-- Need to attribute icons to Pixel Perfect / Freepik -->
+            <a class="nav-link" href="/"><img src="../../public/assets/images/bellicon.png" alt="notifications"></a> |
+            <a class="nav-link" href="/"><img src="../../public/assets/images/usericon.png" alt="profile link"></a> |
+            <div id="logout-btn">
+                <a class="nav-link" href="/logout">Logout</a>
+            </div>
+        {{else}}
+        <a href="/login">Login</a>
+        {{/if}}      
+    </div>
+  </div>
+</nav>
+
+
+
+
 
 
         <!-- Conditionally render login or logout links -->
-        {{#if loggedIn}}
-
-          <div class="userlinks">
-            <!-- Need to attribute icons to Pixel Perfect / Freepik -->
-            <img src="../public/assets/images/bellicon.png" alt="notifications"> |
-            <img src="../public/assets/images/usericon.png" alt="profile link"> |
-            <button class="logout" id="logout">Logout</button>
-          </div>
-
-        {{else}}
-        <a href="/login">Login</a>
-        {{/if}}
+       
 
         {{!-- FUTURE DEVELOPMENT
         <div class="navbar">
@@ -43,8 +71,10 @@
       </nav>
     </header>
     <main>
+      
       <!-- Render the sub layout -->
       {{{ body }}}
+
     </main>
     <footer>
       

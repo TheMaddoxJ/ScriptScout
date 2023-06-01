@@ -1,0 +1,28 @@
+<div class="card">
+    <h2 class="card-header">Enter username and password to sign up</h2>
+    <form id="signup-form" class="card-body">
+        <div class="mb-6">
+            <label for="username" class="form-label">Username</label>
+            <input placeholder="Enter username" type="username" class="form-control" id="username-signup">
+        </div>
+
+        <div class="mb-6">
+            <label for="email" class="form-label">Email</label>
+            <input placeholder="Enter email" type="email" class="form-control" id="email-signup">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+
+        <div class="mb-6">
+            <label for="password" class="form-label">Password</label>
+            <input placeholder="Enter password" type="password" class="form-control" id="password-signup">
+            <div id="passwordHelp" class="form-text">Must be 6 digits long.</div>
+        </div>
+
+        <div class="mb-6">
+            <a href="/login">Already have an account? Login here</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="login-btn">Sign Up</button>
+    </form>
+</div>
+<script src="js/signup.js"></script>
