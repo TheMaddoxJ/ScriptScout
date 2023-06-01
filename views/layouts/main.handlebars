@@ -41,13 +41,14 @@
         {{#if loggedIn}}
              <a class="nav-link" aria-current="page" href="/">Home</a>
             <!-- Need to attribute icons to Pixel Perfect / Freepik -->
-            <a class="nav-link" href="/"><img src="../../public/assets/images/bellicon.png" alt="notifications"></a> |
-            <a class="nav-link" href="/"><img src="../../public/assets/images/usericon.png" alt="profile link"></a> |
+            <a class="nav-link mx-1" href="/"><img src="../../public/assets/images/bellicon.png" alt="notifications"></a> |
+            <a class="nav-link mx-1" href="/"><img src="../../public/assets/images/usericon.png" alt="profile link"></a> |
             <div id="logout-btn">
-                <a class="nav-link" href="/logout">Logout</a>
+                <a class="nav-link mx-1" href="/logout">Logout</a>
             </div>
         {{else}}
-        <a href="/login">Login</a>
+        <a class="mx-1" href="/login">Login</a> |
+        <a class="mx-1" href="/logout">Signup</a>
         {{/if}}      
     </div>
   </div>
