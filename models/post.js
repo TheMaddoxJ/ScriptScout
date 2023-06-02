@@ -27,10 +27,6 @@ Post.init(
             type: DataTypes.INTEGER,
             allowNull: false,
         },
-        // url: {
-        //     type: DataTypes.STRING,
-        //     allowNull: false,
-        // },
         user_id: {
             type: DataTypes.INTEGER,
             references: {
