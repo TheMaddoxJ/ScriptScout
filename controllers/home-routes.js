@@ -11,7 +11,10 @@ router.get('/', async (req, res) => {
 
       // Serialize data retrieved
       const posts = dbPostData.map((post) => post.get({ plain: true }));
-
+      console.log({ posts, 
+        loggedIn: req.session.loggedIn, 
+        username: req.session.name
+        })
       res.render('homepage', 
           { posts, 
           loggedIn: req.session.loggedIn, 
@@ -40,7 +43,7 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
-//Logout 
+// Logout 
 router.get('/logout', (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
@@ -49,6 +52,11 @@ router.get('/logout', (req, res) => {
     return;
   }
   res.render('homepage');
+});
+
+// Profile route
+router.get('/profile', (req, res) => {
+  res.render('profile');
 });
 
 module.exports = router;
