@@ -60,3 +60,8 @@ router.get('/profile', (req, res) => {
 });
 
 module.exports = router;
+
+// New Job Post route
+router.get('/newpost', (req, res) => {
+  res.render('newpost');
+});

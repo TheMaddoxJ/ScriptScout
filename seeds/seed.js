@@ -19,13 +19,6 @@ const seedDatabase = async () => {
     });
   }
 
-  // for (const post of practiceData) {
-  //   await Post.create({
-  //       ...post,
-  //       user_id: users[Math.floor(Math.random() * users.length)].id,
-  //       });
-  //   }
-
   process.exit(0);
 };
 

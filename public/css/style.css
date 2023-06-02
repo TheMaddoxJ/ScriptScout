@@ -1,3 +1,7 @@
 body {
     margin: 1em;
 }
+
+.job-desc {
+    min-height: 250px;
+}
