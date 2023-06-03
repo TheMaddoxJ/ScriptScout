@@ -1,7 +1,8 @@
 [
   {
     "title": "Software Engineer",
-    "content": "Looking for a Software Engineer",
+    "summary": "Looking for a Software Engineer",
+    "reqs": "Must have 3 year of experience with Javascript, Node, Sequelize",
     "location": "Florida",
     "salary": 210000,
     "applyLink": "www.indeed.com",
@@ -9,14 +10,16 @@
   },
   {
     "title": "Junior Developer",
-    "content": "Looking for a Junior Developer",
+    "summary": "Looking for a Software Engineer",
+    "reqs": "Must have 1 year of experience with Javascript, Node, Sequelize",
     "location": "Florida",
     "salary": 950000,
     "applyLink": "www.linkdin.com",
     "user_id": 3
   },  {
     "title": "Intern",
-    "content": "Looking for a great intern",
+    "summary": "Looking for a Software Engineer",
+    "reqs": "Must have a passion for creating great websites",
     "location": "New York",
     "salary": 40000,
     "applyLink": "www.indeed.com",

@@ -2,7 +2,8 @@ const newJobFormHandler = async (event) => {
     event.preventDefault();
 
     const title = document.querySelector('#new-job-title').value.trim();
-    const content = document.querySelector('#new-job-description').value.trim();
+    const summary = document.querySelector('#new-job-summary').value.trim();
+    const reqs = document.querySelector('#new-job-reqs').value.trim();
     const location = document.querySelector('#new-job-location').value.trim();
     const salary = document.querySelector('#new-job-salary').value.trim();
     const applyLink = document.querySelector('#new-job-url').value.trim();
@@ -11,7 +12,8 @@ const newJobFormHandler = async (event) => {
         method: 'POST',
         body: JSON.stringify({
             title,
-            content,
+            summary,
+            reqs,
             location,
             salary,
             applyLink

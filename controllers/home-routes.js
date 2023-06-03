@@ -5,7 +5,7 @@ const { User, Post } = require('../models');
 router.get('/', async (req, res) => {
   try {
       const dbPostData = await Post.findAll({ 
-          attributes: ['id', 'title', 'content', 'location', 'salary'],           
+          attributes: ['id', 'title', 'summary', 'reqs', 'location', 'salary'],           
           // order: [['created_at', 'DESC']],
       })
 

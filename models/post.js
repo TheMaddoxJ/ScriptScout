@@ -15,7 +15,11 @@ Post.init(
             type: DataTypes.STRING,
             allowNull: false,
             },
-        content: {
+        summary: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        reqs: {
             type: DataTypes.STRING,
             allowNull: false,
         },
