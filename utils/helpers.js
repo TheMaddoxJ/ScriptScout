@@ -7,7 +7,6 @@ module.exports = {
       // Format date as MM/DD/YYYY
       return date.toLocaleTimeString();
     },
-
     post_tease: str => {
       const first250 =  str.slice(0, 250);
       return first250;

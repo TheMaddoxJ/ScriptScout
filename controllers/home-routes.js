@@ -52,14 +52,14 @@ router.get('/logout', (req, res) => {
 
 // Profile route
 router.get('/profile', (req, res) => {
-  res.render('profile');
+  res.render('profile', { loggedIn: req.session.loggedIn });
 });
 
 module.exports = router;
 
 // New Job Post route
 router.get('/newpost', (req, res) => {
-  res.render('newpost');
+  res.render('newpost',  { loggedIn: req.session.loggedIn });
 });
 
 // Get single post
@@ -78,7 +78,7 @@ router.get('/post/:id', async (req, res) => {
       if (dbPostData) {
           const post = dbPostData.get({ plain: true });
 
-          res.render('single-post', { post })  
+          res.render('single-post', { post, loggedIn: req.session.loggedIn })  
       } else {
           res.status(404).json({ message: "Error finding post..."});
           return;
