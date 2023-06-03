@@ -2,22 +2,18 @@ const router = require('express').Router();
 const { Post } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+// Create a new job post ('api/posts')
 router.post('/', async (req, res) => {
   try {
-    const newPost = await Post.create({
-      title: req.body.title,
-      content: req.body.content,
-      location: req.body.location,
-      salary: req.body.salary,
-      user_id: req.body.user_id,
-    });
-
-    res.status(200).json(newPost);
+      const newPost = await Post.create({ ...req.body, user_id: req.session.user_id });
+      console.log("This is the new post", newPost);
+      res.status(200).json(newPost);
   } catch (err) {
-    res.status(400).json(err);
+      res.status(400).json(err);
   }
 });
 
+//Delete job post (NO BUTTON YET - TODO)
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const postData = await Post.destroy({

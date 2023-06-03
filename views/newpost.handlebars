@@ -1,0 +1,43 @@
+<div class="d-flex justify-content-center mt-3">
+    <div class="col-9">
+        <div class="card">
+            <h2 class="card-header">New Job Post</h2>
+            <form id="new-job-form" class="card-body">
+                <div class="mb-6">
+                    <label for="title" class="form-label">Job Title</label>
+                    <input placeholder="Enter Job Title" type="title" class="form-control" id="new-job-title">
+                </div>
+
+                <div class="mb-6">
+                    <label for="summary" class="form-label">Job Summary</label>
+                      <textarea class="form-control" placeholder="Enter Job Description" id="new-job-summary" rows="4"></textarea>
+                    <div id="description-help" class="form-text">Include information like job summary, responsibilities, pay and benefits, etc.</div>
+                </div>
+                
+                <div class="mb-6">
+                    <label for="reqs" class="form-label">Job Requirements</label>
+                      <textarea class="form-control" placeholder="Enter Requirements For Position" id="new-job-reqs" rows="4"></textarea>
+                </div>
+
+                <div class="mb-6 col-6">
+                    <label for="location" class="form-label">Location</label>
+                    <input placeholder="Enter Location or 'Remote'" type="location" class="form-control" id="new-job-location">
+                </div>
+
+                <div class="mb-6 col-3">
+                    <label for="salary" class="form-label">Salary</label>
+                    <input placeholder="Enter Expected Salary" type="salary" class="form-control" id="new-job-salary">
+                </div>
+
+                <div class="mb-6">
+                    <label for="applicationurl" class="form-label">Application Link</label>
+                    <input placeholder="Where can candidates apply?" type="applicationurl" class="form-control" id="new-job-url">
+                </div>
+
+                <button type="submit" class="btn btn-primary my-3" id="new-job-btn">Post Job</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="js/newjob.js"></script>

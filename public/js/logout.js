@@ -11,4 +11,4 @@ const logoutHandler = async () => {
   }
 };
 
-document.querySelector('#logout-btn').addEventListener('click', logoutHandler);s
+document.querySelector('#logout-btn').addEventListener('click', logoutHandler);
