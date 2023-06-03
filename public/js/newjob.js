@@ -5,6 +5,7 @@ const newJobFormHandler = async (event) => {
     const content = document.querySelector('#new-job-description').value.trim();
     const location = document.querySelector('#new-job-location').value.trim();
     const salary = document.querySelector('#new-job-salary').value.trim();
+    const applyLink = document.querySelector('#new-job-url').value.trim();
     
     const response = await fetch('/api/posts', {
         method: 'POST',
@@ -12,7 +13,8 @@ const newJobFormHandler = async (event) => {
             title,
             content,
             location,
-            salary
+            salary,
+            applyLink
         }),
         headers: { 'Content-Type': 'application/json' },
     });

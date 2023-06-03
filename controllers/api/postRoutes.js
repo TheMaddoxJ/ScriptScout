@@ -2,9 +2,10 @@ const router = require('express').Router();
 const { Post } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// Create a new job ('api/posts')
+// Create a new job post ('api/posts')
 router.post('/', async (req, res) => {
   try {
+    console.info(req.body);
       const newPost = await Post.create({ ...req.body, user_id: req.session.user_id });
       console.log("This is the new post", newPost);
       res.status(200).json(newPost);

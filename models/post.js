@@ -27,6 +27,10 @@ Post.init(
             type: DataTypes.INTEGER,
             allowNull: false,
         },
+        applyLink: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         user_id: {
             type: DataTypes.INTEGER,
             references: {

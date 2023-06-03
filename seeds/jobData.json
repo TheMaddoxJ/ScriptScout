@@ -3,21 +3,23 @@
     "title": "Software Engineer",
     "content": "Looking for a Software Engineer",
     "location": "Florida",
-    "salary": 10000,
+    "salary": 210000,
+    "applyLink": "www.indeed.com",
     "user_id": 1
   },
   {
-    "title": "Software Engineer",
-    "content": "Looking for a Software Engineer",
-    "location": "California",
-    "salary": 20000,
-    "user_id": 2
-  },
-  {
-    "title": "Software Engineer",
-    "content": "Looking for a Software Engineer",
-    "location": "NY",
-    "salary": 15000,
+    "title": "Junior Developer",
+    "content": "Looking for a Junior Developer",
+    "location": "Florida",
+    "salary": 950000,
+    "applyLink": "www.linkdin.com",
     "user_id": 3
+  },  {
+    "title": "Intern",
+    "content": "Looking for a great intern",
+    "location": "New York",
+    "salary": 40000,
+    "applyLink": "www.indeed.com",
+    "user_id": 2
   }
 ]
