@@ -16,11 +16,11 @@ Post.init(
             allowNull: false,
             },
         summary: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: false,
         },
         reqs: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: false,
         },
         location: {
