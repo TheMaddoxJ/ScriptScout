@@ -1,6 +1,38 @@
-<div>
-    <h1>Contact {{user.name}}!</h1>
-    <h3>Email: {{user.email}}</h3>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <h1>Hello {{User.name}}!</h1>
+    </head>
 
-<script src="/js/profile.js"></script>
+    <body>
+        <div class="container">
+            <div class="profile-header">
+                <h1 class="name">{{ User.name }}</h1>
+                <h2 id ="profession" class="profession">Software Developer</h2>
+                <button id="edit-job-button">Edit</button>
+                <p id="location" class="location">San Francisco Bay Area</p>
+                <button id="edit-location-button">Edit</button>
+            </div>
+
+            <div class="profile-content">
+                <div class="about">
+                    <h3 class="section-title">About Me</h3>
+                    <p id="about-text" class="about-text">
+                        Edit your "About" section
+                    </p>
+                    <button id="edit-about-button">Edit</button>
+                </div>
+
+                <div class="projects">
+                    <h3 class="section-title">Projects</h3>
+                    <p id="projects-list" class="projects-text">
+                        Add your "Projects" here
+                    </p>
+                    <button id="add-project-button">Add</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="/js/profile.js"></script>
+    </body>
+</html>
