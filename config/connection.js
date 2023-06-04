@@ -4,7 +4,7 @@ require('dotenv').config();
 const sequelize = new Sequelize(
   'scriptscout_db',
   'root',
-  'Maddox07',
+  'Ginger0319!!',
   {
     host: 'localhost',
     dialect: 'mysql',
