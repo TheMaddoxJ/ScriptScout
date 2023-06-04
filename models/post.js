@@ -15,8 +15,12 @@ Post.init(
             type: DataTypes.STRING,
             allowNull: false,
             },
-        content: {
-            type: DataTypes.STRING,
+        summary: {
+            type: DataTypes.TEXT,
+            allowNull: false,
+        },
+        reqs: {
+            type: DataTypes.TEXT,
             allowNull: false,
         },
         location: {
@@ -25,6 +29,10 @@ Post.init(
         },
         salary: {
             type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        applyLink: {
+            type: DataTypes.STRING,
             allowNull: false,
         },
         user_id: {
