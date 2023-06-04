@@ -1,3 +1,5 @@
+const handlebars = require('handlebars');
+
 module.exports = {
     format_date: (date) => {
       // Format date as MM/DD/YYYY
@@ -11,4 +13,4 @@ module.exports = {
       const first250 =  str.slice(0, 250);
       return first250;
     },
-};
+  };
