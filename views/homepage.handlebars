@@ -1,7 +1,16 @@
-<p>Testing home page</p>
-{{!-- {{username}}  --}}
+
+    <div class="d-flex justify-content-center mt-3">
+        <div class="col-9">
+            {{#if loggedIn}}
+            <a class="float-end text-white" href="/newpost">Post a Job</a>
+            {{else}}
+            <p class="float-end text-white">Login to post a job</p>
+            {{/if}}
+        </div>
+    </div>
+
 <div class="posts d-flex justify-content-center">
-    <div class="d-block col-6">
+    <div class="d-block col-9">
         {{#each posts as |post|}}
         <div class="mt-2">
             {{> postcard post}}

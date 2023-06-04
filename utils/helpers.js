@@ -4,8 +4,11 @@ module.exports = {
       return date ? date.toLocaleDateString() : date;
     },
     format_time: (date) => {
-        // Format date as MM/DD/YYYY
-        return date.toLocaleTimeString();
-        },
+      // Format date as MM/DD/YYYY
+      return date.toLocaleTimeString();
+    },
+    post_tease: str => {
+      const first250 =  str.slice(0, 250);
+      return first250;
+    },
 };
-
