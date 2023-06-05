@@ -55,8 +55,6 @@ router.get('/profile', (req, res) => {
   res.render('profile', { loggedIn: req.session.loggedIn });
 });
 
-module.exports = router;
-
 // New Job Post route
 router.get('/newpost', (req, res) => {
   res.render('newpost',  { loggedIn: req.session.loggedIn });
@@ -87,3 +85,5 @@ router.get('/post/:id', async (req, res) => {
       res.status(500).json(err);
   }   
 });
+
+module.exports = router;
