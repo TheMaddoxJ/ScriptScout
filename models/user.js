@@ -35,6 +35,14 @@ User.init(
         len: [6],
       },
     },
+    job_title: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    about: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
   },
   {
     hooks: {

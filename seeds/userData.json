@@ -2,26 +2,36 @@
   {
     "name": "Maddox",
     "email": "Maddox@gmail.com",
-    "password": "password12345"
+    "password": "password12345",
+    "job_title": "Senior Engineer",
+    "about": "About me information goes here"
   },
   {
     "name": "Fernando",
     "email": "fern@gmail.com",
-    "password": "password12345"
+    "password": "password12345",
+    "job_title": "Software Developer",
+    "about": "About me information goes here"
   },
   {
     "name": "Joshua",
     "email": "Joshua@gmail.com",
-    "password": "password12345"
+    "password": "password12345",
+    "job_title": "Full Stack Developer",
+    "about": "About me information goes here"
   },
   {
     "name": "Khusil",
     "email": "Khusil@gmail.com",
-    "password": "password12345"
+    "password": "password12345",
+    "job_title": "Software Developer",
+    "about": "About me information goes here"
   },
   {
     "name": "JK",
     "email": "JK@gmail.com",
-    "password": "GiveusanA+!"
+    "password": "GiveusanA+!",
+    "job_title": "Software Developer",
+    "about": "About me information goes here"
   }
 ]

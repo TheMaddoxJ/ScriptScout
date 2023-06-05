@@ -4,6 +4,8 @@ const signupFormHandler = async (event) => {
     const name = document.querySelector('#name-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
+    const job_title = document.querySelector('#job-title-signup').value.trim();
+    const about = document.querySelector('#about-signup').value.trim();
 
     const response = await fetch('/api/users', {
         method: 'POST',
@@ -11,6 +13,8 @@ const signupFormHandler = async (event) => {
             name,
             email,
             password,
+            job_title,
+            about,
         }),
         headers: { 'Content-Type': 'application/json' },
     });
