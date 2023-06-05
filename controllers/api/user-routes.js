@@ -36,11 +36,12 @@ router.post('/login', async (req, res) => {
         }
         // create session and send response back
         req.session.save(() => {
+            req.session.id = dbUserData.id;
             req.session.name = dbUserData.name;
             req.session.email = dbUserData.email;
             req.session.loggedIn = true;        
         //send response to client
-        res.status(200).json({ message: "You are logged in!" });
+        res.status(200).json({ message: `You are logged into id: ${dbUserData.id} !` });
         });
     } catch (err) {
         res.status(400).json(err);
