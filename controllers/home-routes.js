@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User, Post } = require('../models');
+const withAuth = require('../utils/auth');
 
 // Homepage route
 router.get('/', async (req, res) => {
@@ -39,6 +40,24 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
+// Use withAuth middleware to prevent access to route
+router.get('/profile', withAuth, async (req, res) => {
+  try {
+    // Find the logged in user based on the session ID
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: ['id'],
+    });
+    const user = userData.get({ plain: true });
+    res.render('profile', {
+      ...user, 
+      req: req.session,
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 // Logout 
 router.get('/logout', (req, res) => {
   if (req.session.loggedIn) {
@@ -48,11 +67,6 @@ router.get('/logout', (req, res) => {
     return;
   }
   res.render('homepage');
-});
-
-// Profile route
-router.get('/profile', (req, res) => {
-  res.render('profile', { loggedIn: req.session.loggedIn });
 });
 
 // New Job Post route
