@@ -1,22 +1,35 @@
 <div class="container">
     <div class="profile-header">
-        <h1 class="name">{{ req.name }}</h1>
-        <h2 id ="profession" class="profession">{{ req.jobTitle }}</h2>
-        <button id="edit-job-button">Edit</button>
-        <p id="location" class="location">{{req.Location}}</p>
-        <button id="edit-location-button">Edit</button>
+        <div class="d-flex">
+            <h1 class="name text-white">{{ req.name }}</h1>
+            {{! EDIT PAGE NOT FUNCTIONAL YET}}
+            <a href="/profile"><img id="edit-profile" class="edit-btn mx-2 mt-3" src="assets/images/edit-btn.png" /><a>
+        </div>
+        <div class="d-flex">
+            <h2 id="profession" class="profession text-white">{{ req.jobTitle }}</h2>
+        </div>
+        <h3 class="section-title text-white mt-5">Location</h3>
+        <div class="d-flex">
+            <p id="location" class="location text-white">{{req.location}}</p>
+        </div>
     </div>
+
 
     <div class="profile-content">
         <div class="about">
-            <h3 class="section-title">About Me</h3>
-            <p id="about-text" class="about-text">
+            <h3 class="section-title text-white">About Me</h3>
+            <div class="d-flex">
+                <p id="about-text" class="about-text text-white">
                 {{req.aboutMe}}
-            </p>
-            <button id="edit-about-button">Edit</button>
+                </p>
+            </div>
         </div>
+    </div>
+</div>
 
-        <div class="projects">
+
+        {{! ADD PROJECTS MODELS TO EXTEND USER MODEL WITH USER ID AS FOREIGN KEY / ADD ASSOCIATIONS / ADD REQ VARIABLES TO LOGIN ROUTE TO SAVE TO SESSION }}
+        {{!-- <div class="projects">
             <h3 class="section-title">Projects</h3>
             <p id="projects-list" class="projects-text">
                 Add your "Projects" here
@@ -24,6 +37,6 @@
             <button id="add-project-button">Add</button>
         </div>
     </div>
-</div>
+</div> --}}
 
-<script src="/js/profile.js"></script>
+<script src="/js/edit.js"></script>

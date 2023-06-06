@@ -5,3 +5,10 @@
 .navbar-brand {
     height: 100px;
 }
+
+.edit-btn {
+    height: 20px;
+    width: 20px;
+    background: none;
+    border: none;
+}

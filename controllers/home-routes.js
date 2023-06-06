@@ -40,7 +40,7 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
-// Use withAuth middleware to prevent access to route
+// Get user profile
 router.get('/profile', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
@@ -57,6 +57,31 @@ router.get('/profile', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+// // edit user profile info ('/edit') TODO - NOT WORKING YET
+// router.put('/edit', withAuth, async (req, res) => {
+//   try {
+//     const updatedProfile = await User.update(
+//       {
+//         jobTitle: req.body.jobTitle,
+//         location: req.body.location,
+//         aboutMe: req.body.aboutMe
+//       },
+//       {
+//         where: {
+//           id: req.params.id,
+//         },
+//       }
+//     );
+//     if (!updatedProfile) {
+//       res.status(404).json({ message: 'Error finding user profile information' });
+//       return;
+//     }  
+//     res.status(200).json(updatedProfile);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 // Logout 
 router.get('/logout', (req, res) => {

@@ -1,0 +1,27 @@
+<div class="card m-auto my-2 col-6">
+    <h2 class="card-header">Edit Your Profile</h2>
+    <form class="card-body edit-form">
+
+      <div class="form-group">
+        <label class="form-label">Job Title:</label>
+        <input type="text" class="form-input col-9" name="job-title" value="{{user.jobTitle}}"/>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Location:</label>
+        <textarea class="form-textarea form-input col-12 post-content" name="user-location">{{user.location}}</textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">About Me:</label>
+        <textarea class="form-textarea form-input col-12 post-content" name="user-about">{{user.aboutMe}}</textarea>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary float-end"><i class="bi bi-pencil"></i>Save</button>
+      </div>
+
+    </form>
+   
+</div>
+<script src="/js/edit.js"></script>
