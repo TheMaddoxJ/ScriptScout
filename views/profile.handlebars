@@ -1,40 +1,43 @@
+<div class="container">
+    <div class="profile-header">
+        <div class="d-flex">
+            <h1 class="name text-white">{{ req.name }}</h1>
+            {{! EDIT PAGE NOT FUNCTIONAL YET}}
+            <a href="/profile"><img id="edit-profile" class="edit-btn mx-2 mt-3" src="assets/images/edit-btn.png" /><a>
+        </div>
+        <div class="d-flex">
+            <h2 id="profession" class="profession text-white">{{ req.jobTitle }}</h2>
+        </div>
+        <h3 class="section-title text-white mt-5">Location</h3>
+        <div class="d-flex">
+            <p id="location" class="location text-white">{{req.location}}</p>
+        </div>
+    </div>
 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <h1>Hello {{User.name}}!</h1>
-    </head>
 
-    <body>
-        <div class="container">
-            <div class="profile-header">
-                <h1 class="name">{{ User.name }}</h1>
-                <h2 id ="profession" class="profession">Software Developer</h2>
-                <button id="edit-job-button">Edit</button>
-                <p id="location" class="location">San Francisco, CA</p>
-                <button id="edit-location-button">Edit</button>
-            </div>
-
-            <div class="profile-content">
-                <div class="about">
-                    <h3 class="section-title">About Me</h3>
-                    <p id="about-text" class="about-text">
-                        Edit your "About" section
-                    </p>
-                    <button id="edit-about-button">Edit</button>
-                </div>
-
-                <div class="projects">
-                    <h3 class="section-title">Projects</h3>
-                    <p id="projects-list" class="projects-text">
-                        Add your "Projects" here
-                    </p>
-                    <button id="add-project-button">Add</button>
-                </div>
+    <div class="profile-content">
+        <div class="about">
+            <h3 class="section-title text-white">About Me</h3>
+            <div class="d-flex">
+                <p id="about-text" class="about-text text-white">
+                {{req.aboutMe}}
+                </p>
             </div>
         </div>
+    </div>
 
-        <script src="/js/profile2.js"></script>
-    </body>
-</html>
 
+
+    {{! ADD PROJECTS MODELS TO EXTEND USER MODEL WITH USER ID AS FOREIGN KEY / ADD ASSOCIATIONS / ADD REQ VARIABLES TO LOGIN ROUTE TO SAVE TO SESSION }}
+    <div class="projects">
+        <h3 class="section-title text-white">My Projects</h3>
+        <div class="d-flex">
+            <img class="project-image mx-1" src="/assets/images/examplefill2.png" alt="project image 1" />
+            <img class="project-image mx-1" src="/assets/images/examplefill3.png" alt="project image 2" />
+            <img class="project-image mx-1" src="/assets/images/examplefill4.png" alt="project image 3" />
+
+        </div>
+    </div>
+</div>
+
+<script src="/js/edit.js"></script>

@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User, Post } = require('../models');
+const withAuth = require('../utils/auth');
 
 // Homepage route
 router.get('/', async (req, res) => {
@@ -39,6 +40,49 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
+// Get user profile
+router.get('/profile', withAuth, async (req, res) => {
+  try {
+    // Find the logged in user based on the session ID
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: ['id'],
+    });
+    const user = userData.get({ plain: true });
+    res.render('profile', {
+      ...user, 
+      req: req.session,
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// // edit user profile info ('/edit') TODO - NOT WORKING YET
+// router.put('/edit', withAuth, async (req, res) => {
+//   try {
+//     const updatedProfile = await User.update(
+//       {
+//         jobTitle: req.body.jobTitle,
+//         location: req.body.location,
+//         aboutMe: req.body.aboutMe
+//       },
+//       {
+//         where: {
+//           id: req.params.id,
+//         },
+//       }
+//     );
+//     if (!updatedProfile) {
+//       res.status(404).json({ message: 'Error finding user profile information' });
+//       return;
+//     }  
+//     res.status(200).json(updatedProfile);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+
 // Logout 
 router.get('/logout', (req, res) => {
   if (req.session.loggedIn) {
@@ -48,11 +92,6 @@ router.get('/logout', (req, res) => {
     return;
   }
   res.render('homepage');
-});
-
-// Profile route
-router.get('/profile', (req, res) => {
-  res.render('profile', { loggedIn: req.session.loggedIn });
 });
 
 // New Job Post route

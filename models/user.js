@@ -35,13 +35,17 @@ User.init(
         len: [6],
       },
     },
-    job_title: {
+    jobTitle: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    about: {
+    location: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    aboutMe: {
       type: DataTypes.TEXT,
-      allowNull: false,
+      allowNull: true,
     },
   },
   {

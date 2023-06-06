@@ -1,28 +1,29 @@
 [
   {
-    "title": "Software Engineer",
-    "summary": "Looking for a Software Engineer",
-    "reqs": "Must have 3 year of experience with Javascript, Node, Sequelize",
+    "title": "Junior Software Engineer",
+    "summary": "We are seeking a talented and enthusiastic Junior Software Engineer to join our dynamic and innovative team. As a Junior Software Engineer, you will play a crucial role in developing and maintaining our software applications and systems. You will work closely with senior engineers and project managers to contribute to the design, implementation, and testing of software solutions.",
+    "reqs": "Must have 1 year of experience with Javascript, Node, Sequelize",
     "location": "Florida",
-    "salary": 210000,
+    "salary": 75000,
     "applyLink": "www.indeed.com",
     "user_id": 1
   },
   {
-    "title": "Junior Developer",
-    "summary": "Looking for a Software Engineer",
+    "title": "Junior Software Engineer",
+    "summary": "We are seeking a talented and enthusiastic Junior Software Engineer to join our dynamic and innovative team. As a Junior Software Engineer, you will play a crucial role in developing and maintaining our software applications and systems. You will work closely with senior engineers and project managers to contribute to the design, implementation, and testing of software solutions.",
     "reqs": "Must have 1 year of experience with Javascript, Node, Sequelize",
     "location": "Florida",
-    "salary": 950000,
-    "applyLink": "www.linkedin.com",
-    "user_id": 3
-  },  {
-    "title": "Intern",
-    "summary": "Looking for a Software Engineer",
-    "reqs": "Must have a passion for creating great websites",
-    "location": "New York",
-    "salary": 40000,
+    "salary": 75000,
     "applyLink": "www.indeed.com",
-    "user_id": 2
+    "user_id": 1
+  }, 
+  {
+    "title": "Junior Software Engineer",
+    "summary": "We are seeking a talented and enthusiastic Junior Software Engineer to join our dynamic and innovative team. As a Junior Software Engineer, you will play a crucial role in developing and maintaining our software applications and systems. You will work closely with senior engineers and project managers to contribute to the design, implementation, and testing of software solutions.",
+    "reqs": "Must have 1 year of experience with Javascript, Node, Sequelize",
+    "location": "Florida",
+    "salary": 75000,
+    "applyLink": "www.indeed.com",
+    "user_id": 1
   }
 ]

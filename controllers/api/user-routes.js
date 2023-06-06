@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { response } = require('express');
 const { User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
@@ -36,10 +37,13 @@ router.post('/login', async (req, res) => {
         }
         // create session and send response back
         req.session.save(() => {
-            req.session.id = dbUserData.id;
+            req.session.user_id = dbUserData.id;
             req.session.name = dbUserData.name;
             req.session.email = dbUserData.email;
-            req.session.loggedIn = true;        
+            req.session.jobTitle = dbUserData.jobTitle;
+            req.session.location = dbUserData.location;
+            req.session.aboutMe = dbUserData.aboutMe;
+            req.session.loggedIn = true;       
         //send response to client
         res.status(200).json({ message: `You are logged into id: ${dbUserData.id} !` });
         });
