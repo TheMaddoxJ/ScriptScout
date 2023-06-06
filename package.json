@@ -4,8 +4,8 @@
   "description": "An application for new software developers looking for entry level careers with little to no experience required. Find the dream job you've been looking for without hardly looking.",
   "main": "server.js",
   "scripts": {
-    "start": "npm start",
-    "server": "npm start",
+    "start": "node start",
+    "server": "node start",
     "seed": "node seeds/seed.js"
   },
   "repository": {
