@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { User, Post } = require('../models');
+const { User, Post, Profile } = require('../models');
+const withAuth = require('../utils/auth');
 
 // Homepage route
 router.get('/', async (req, res) => {
@@ -51,8 +52,22 @@ router.get('/logout', (req, res) => {
 });
 
 // Profile route
-router.get('/profile', (req, res) => {
-  res.render('profile', { loggedIn: req.session.loggedIn });
+router.get('/profile', withAuth, async (req, res) => {
+  try {
+    const profData = await User.findByPk(req.session.id, {
+      attributes: {exclude: ['password']}, 
+      include: [{ model: Profile }],
+    })
+
+    const profile = profData.get({ plain: true});
+
+  res.render('profile', { 
+    ...profile, 
+    loggedIn: req.session.loggedIn 
+  });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 // New Job Post route

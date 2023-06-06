@@ -7,6 +7,7 @@ router.post('/', async (req, res) => {
     try {
         const dbUserData = await User.create(req.body);
         req.session.save(() => {
+            req.session.id = dbUserData.id;
             req.session.name = dbUserData.name;
             req.session.email = dbUserData.email;
             req.session.password = dbUserData.password;
@@ -39,7 +40,9 @@ router.post('/login', async (req, res) => {
             req.session.id = dbUserData.id;
             req.session.name = dbUserData.name;
             req.session.email = dbUserData.email;
-            req.session.loggedIn = true;        
+            req.session.loggedIn = true; 
+            console.log("pls work");
+       
         //send response to client
         res.status(200).json({ message: `You are logged into id: ${dbUserData.id} !` });
         });

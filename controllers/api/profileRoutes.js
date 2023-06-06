@@ -21,12 +21,20 @@ router.post('/', async (req, res) => {
             where: {
                 id: req.params.id,
                 profile_id: req.params.id }
-            });
+          });
         if (!profData[0]) {
             res.status(404).json({ message: "No profile found with this id!" });
             return;
         }
-        res.status(200).json(profData);
+        res.session.save(() => {
+          req.session.id = profData.id;
+          req.session.title = profData.title;
+          req.session.about = profData.about;
+          req.session.location = profData.location;
+          req.session.projects = profData.projects;
+          req.session.loggedIn = true; 
+        
+        res.status(200).json(profData) });
         } catch (err) {
         res.status(400).json(err);
       }
